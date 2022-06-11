@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+  font-family: "Press Start 2P", cursive;
+}
+
+body {
+  background-color: #222;
+  color: #eee;
+  font-size: 62.5%;
+  margin: 1rem 1rem 0 1rem;
+}
+
+header {
+  display: grid;
+  grid-template: 60px 100px 100px / repeat(2, 1fr);
+  grid-template-areas:
+    "again-btn between-label"
+    "guess-heading guess-heading"
+    "guess-box guess-box";
+}
+
+.btn {
+  width: 145px;
+  height: 50px;
+  font-size: 15px;
+  text-align: center;
+  cursor: pointer;
+}
+
+h1 {
+  grid-area: guess-heading;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.again {
+  grid-area: again-btn;
+}
+
+.between {
+  grid-area: between-label;
+  text-align: right;
+}
+
+.number {
+  display: inline-block;
+  width: 100px;
+  height: 80px;
+  grid-area: guess-box;
+  background-color: #eee;
+  justify-self: center;
+  color: #222;
+  font-size: 40px;
+  text-align: center;
+  padding-top: 1.3rem;
+}
+
+.line {
+  display: inline-block;
+  background-color: #eee;
+  height: 5px;
+  position: relative;
+  top: 2.3rem;
+  grid-area: guess-box;
+  z-index: -1;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-top: 4rem;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+}
+
+.guess {
+  width: 180px;
+  height: 80px;
+  outline: none;
+  border: 4px solid #eee;
+  background-color: transparent;
+  margin-bottom: 1rem;
+  color: #eee;
+  font-size: 35px;
+  text-align: center;
+  padding: 1.5rem 2.8rem;
+}
+
+.check {
+  align-self: center;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+  justify-items: flex-start;
+}
+
+.message {
+  margin: 0 0 4rem 0;
+}
+
+.score {
+  margin-top: 0.1rem;
+}

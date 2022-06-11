@@ -1,0 +1,70 @@
+Nav-Bar
+<p> class - welcome
+<img> class - logo
+<input> class - 1. login__input login__input--user
+                2. login__input login__input--pin
+<button> class - login__btn
+
+Balance
+<main> class - app
+<div> class - balance
+    <p> class - balance__label
+    <p> class - balance__date
+        <span> class - date
+    <p> class - balance__value
+
+Movements
+<div> - movements
+   <div> - movements__row
+       <div> - movements__type movements__type--deposit
+       <div> - movements__date
+       <div> - movements__value
+
+   <div> - movements__row
+       <div> - movements__type movements__type--withdrawal
+       <div> - movements__date
+       <div> - movements__value
+
+Summary
+<div> - summary
+   <p> - summary__label
+   <p> - summary__value summary__value--in
+   
+   <p> - summary__label
+   <p> - summary__value summary__value--out
+
+   <p> - summary__label
+   <p> - summary__value summary__value--interest
+
+   <button> - btn--sort
+
+
+Operation: Transfers
+<div> - operation operation--transfer
+<form> - form form--transfer
+<input> - form__input form__input--to
+<input> - form__input form__input--amount
+<button> - form__btn form__btn--transfer
+<label> - form__label x2
+
+
+Operation: Loan
+<div> - operation operation--loan
+<form> - form form--loan
+<input> - form__input form__input--loan-amount
+<button> - form__btn form__btn--loan
+<label> - form__label form__label--loan
+
+
+Operation: Close
+<div> - operation operation--close
+<form> - form form--close
+<input> - form__input form__input--user
+<input> - form__input form__input--pin
+<button> - form__btn form__btn--close
+<label> - form__label x2
+
+Logout Timer
+<p> - logout-timer
+<span> - timer
+

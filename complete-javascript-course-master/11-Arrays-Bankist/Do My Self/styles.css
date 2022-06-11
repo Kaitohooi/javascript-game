@@ -1,0 +1,317 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #f3f3f3;
+  padding: 20px 20px;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  height: 6rem;
+  padding: 0 20px;
+  position: relative;
+}
+
+.welcome {
+  font-size: 19px;
+  font-weight: 500;
+  color: #444;
+}
+
+.logo {
+  width: 5.25rem;
+  height: 5.25rem;
+  position: absolute;
+  left: 540px;
+  margin: 0.5rem;
+}
+
+.login__input {
+  width: 12rem;
+  height: 3.5rem;
+  padding: 5px 20px;
+  margin-right: 10px;
+  border: 1px solid #fff;
+  outline: none;
+  border-radius: 10rem;
+  font-size: 16px;
+  text-align: center;
+  transition: border 0.5s;
+}
+
+.login__input:focus,
+.login__input:active {
+  border: 1px solid #ccc;
+}
+
+::placeholder {
+  color: rgb(199, 198, 198);
+}
+
+.nav__input {
+  display: inline-flex;
+  flex-direction: row;
+  position: absolute;
+  right: 5rem;
+  margin: 1rem;
+  align-items: center;
+}
+
+.login__btn {
+  position: relative;
+  bottom: 0.3rem;
+  border: none;
+  font-size: 2.4rem;
+  cursor: pointer;
+  margin: 1rem 0;
+  background: none;
+}
+
+.app {
+  margin: 1rem 11rem;
+
+  /* NOTE This creates the fade in/out anumation */
+  opacity: 0;
+  transition: all 1s;
+}
+
+.balance {
+  position: relative;
+  line-height: 3px;
+}
+
+.balance__label {
+  font-size: 22px;
+  font-weight: 500;
+  color: rgb(68, 68, 68);
+  margin-top: 6.5rem;
+}
+
+.balance__date {
+  font-size: 14px;
+  color: rgb(136, 136, 136);
+}
+
+.balance__value {
+  position: absolute;
+  top: -4rem;
+  right: 0;
+  color: rgb(68, 68, 68);
+  font-size: 45px;
+}
+
+.app__main {
+  display: grid;
+  grid-template-rows: 150px 150px 150px;
+  grid-template-columns: 560px 420px;
+  grid-template-areas:
+    "movements transfer"
+    "movements loan"
+    "movements close";
+  gap: 2rem 2rem;
+  margin-top: 6rem;
+  margin-bottom: 3rem;
+}
+
+.movements {
+  grid-area: movements;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 1rem;
+  overflow: hidden auto;
+}
+
+.movements__row {
+  padding: 2.25rem 4rem;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.movements__type {
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  color: #fff;
+  border-radius: 10rem;
+  padding: 0.3rem 1rem;
+  text-align: center;
+}
+
+.movements__type--deposit {
+  background-image: linear-gradient(to top left, #39b385, #9be15d);
+}
+
+.movements__type--withdrawal {
+  background-image: linear-gradient(to top left, #e52a5a, #ff585f);
+}
+
+.movements__date {
+  font-weight: 500;
+  justify-self: flex-start;
+  position: relative;
+  right: 11.5rem;
+}
+
+.movements__value {
+  font-size: 1.7rem;
+  color: #444;
+}
+
+.operation {
+  border-radius: 1rem;
+  padding: 2rem 4rem;
+  color: #444;
+}
+
+.operation--transfer {
+  grid-area: transfer;
+  background-image: linear-gradient(to top left, #ffb003, #ffcb03);
+}
+
+.operation--loan {
+  grid-area: loan;
+  background-image: linear-gradient(to top left, #39b385, #9be15d);
+}
+
+.operation--close {
+  grid-area: close;
+  background-image: linear-gradient(to top left, #e52a5a, #ff585f);
+}
+
+.form__input {
+  width: 40%;
+  height: 3rem;
+  padding: 0.3rem 1rem;
+  background-color: rgba(255, 255, 255, 0.4);
+  outline: none;
+  border-radius: 0.7rem;
+  border: none;
+  font-size: 1.3rem;
+  margin-right: 1rem;
+  transition: background-color 0.5s;
+}
+
+.form__input:focus,
+.form__input:active {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.operation h2 {
+  font-size: 1.7rem;
+  margin-bottom: 1.5rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: row;
+  margin: 0.8rem 0;
+}
+
+.form__btn {
+  outline: none;
+  border: none;
+  font-size: 1.8rem;
+  border-radius: 0.7rem;
+  background-color: #fff;
+  cursor: pointer;
+  padding: 0.3rem 1.8rem;
+  transition: background-color 0.1s;
+}
+
+.form__btn:focus {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.form__label {
+  font-size: 1.3rem;
+  display: inline-block;
+}
+
+.form__label--to {
+  transform: translateX(33px);
+}
+
+.form__label--amount {
+  transform: translateX(112px);
+}
+
+.form__label--loan {
+  transform: translateX(42px);
+}
+
+.form__label--user {
+  transform: translateX(25px);
+}
+
+.form__label--pin {
+  transform: translateX(85px);
+}
+
+.summary {
+  display: inline-block;
+}
+
+.summary p {
+  display: inline-block;
+}
+
+.summary__label {
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-right: 0.8rem;
+}
+
+.summary__value {
+  font-size: 2.2rem;
+  margin-right: 2.5rem;
+}
+
+.summary__value--in {
+  color: #66c873;
+}
+
+.summary__value--out {
+  color: #f5465d;
+}
+
+.summary__value--interest {
+  color: #66c873;
+}
+
+.btn--sort {
+  border: none;
+  cursor: pointer;
+  font-size: 1.4rem;
+  margin-left: 8rem;
+  position: relative;
+  bottom: 3px;
+}
+
+.btn--sort:hover,
+.btn--sort:visited {
+  color: #777;
+}
+
+.logout-timer {
+  display: inline-block;
+  font-size: 1.25rem;
+  margin-left: 20rem;
+  position: relative;
+  bottom: 3px;
+}
+
+.timer {
+  font-weight: 600;
+}
